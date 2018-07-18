@@ -14,10 +14,15 @@ BOT_NAME = 'checker'
 SPIDER_MODULES = ['checker.spiders']
 NEWSPIDER_MODULE = 'checker.spiders'
 
+# only log warning stuff
 LOG_LEVEL = 'WARNING'
 
+# output to stdout
+FEED_URI = 'stdout:'
+FEED_FORMAT = 'jsonlines'
+
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'checker (+http://www.yourdomain.com)'
+USER_AGENT = 'taskcluster-docs-checker'
 
 # Don't obey robots.txt rules (we're scanning our own site..)
 ROBOTSTXT_OBEY = False
